@@ -42,6 +42,7 @@ ticket_1.update
 # Customer.all
 
 customer_1.films
+film_3.customers
 
 binding.pry
 
