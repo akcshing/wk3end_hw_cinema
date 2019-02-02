@@ -22,6 +22,12 @@ class Film
     return results
   end
 
+  def customer_count
+    customers = self.customers
+    number_of_customers = customers.count
+    return number_of_customers
+  end
+
   def save
     sql = "INSERT INTO films (title, price) VALUES ($1, $2) RETURNING *"
     values = [@title, @price]

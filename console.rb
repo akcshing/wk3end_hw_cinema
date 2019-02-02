@@ -51,6 +51,7 @@ customer_1.remaining_funds
 
 customer_1.ticket_count
 
+film_3.customer_count
 binding.pry
 
 nil
