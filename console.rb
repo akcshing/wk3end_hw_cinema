@@ -6,6 +6,7 @@ require("pry")
 
 Customer.delete_all()
 Film.delete_all()
+Ticket.delete_all()
 
 customer_1 = Customer.new({"name"=>"Alex", "funds"=>30})
 customer_2 = Customer.new({"name"=>"Roderick", "funds"=>40})
