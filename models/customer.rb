@@ -1,4 +1,5 @@
 require_relative("../db/sql_runner")
+require("pry")
 
 class Customer
 
@@ -20,6 +21,21 @@ class Customer
     films = SqlRunner.run(sql, values)
     results = films.map{|film| Film.new(film)}
     return results
+  end
+
+  def remaining_funds
+    films = self.films
+    film_prices_array = films.map{|film| film.price.to_i }
+    # p film_prices_array
+    total_price = film_prices_array.sum
+    @funds -= total_price
+    self.update
+  end
+
+  def ticket_count
+    films = self.films
+    ticket_count = films.count
+    return ticket_count
   end
 
   def save

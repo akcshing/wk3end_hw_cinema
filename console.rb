@@ -31,9 +31,12 @@ film_1.title = "Avengers"
 film_1.update
 
 ticket_1 = Ticket.new({"customer_id" => customer_1.id, "film_id" => film_3.id})
+ticket_2 = Ticket.new({"customer_id" => customer_1.id, "film_id" => film_1.id})
+ticket_3 = Ticket.new({"customer_id" => customer_2.id, "film_id" => film_2.id})
 
 ticket_1.save
-
+ticket_2.save
+ticket_3.save
 
 # ticket_1.customer_id = customer_3.id
 ticket_1.update
@@ -43,6 +46,10 @@ ticket_1.update
 
 customer_1.films
 film_3.customers
+
+customer_1.remaining_funds
+
+customer_1.ticket_count
 
 binding.pry
 
